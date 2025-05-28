@@ -1,0 +1,430 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-image-wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: white;
+  font-weight: 300;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 400;
+}
+
+/* Navigation */
+nav {
+  padding: 40px 0;
+  text-align: center;
+  background: #fafafa;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* Sections */
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: -0.01em;
+}
+
+/* About Section */
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 80px;
+  align-items: center;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* iPhone Mockup */
+.iphone-mockup {
+  position: relative;
+  width: 200px;
+  height: 400px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  border-radius: 35px;
+  padding: 12px;
+  box-shadow: 0 0 0 2px #ddd, 0 20px 40px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.iphone-screen {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.iphone-notch {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 15px;
+  background: #333;
+  border-radius: 0 0 8px 8px;
+  z-index: 10;
+}
+
+.project-screen-content {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+.project-screen-content img {
+  width: 100%;
+  height: 100%;
+}
+
+.project-screen-content.app1 {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+}
+
+.project-screen-content.app2 {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+}
+
+.project-screen-content.app3 {
+  background: linear-gradient(135deg, #45b7d1 0%, #96c93d 100%);
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tech-tag {
+  background: #f0f0f0;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+}
+
+.project-link {
+  text-decoration: none;
+  color: #667eea;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: 2px solid #667eea;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill-category {
+  text-align: center;
+  padding: 30px;
+  background: #fafafa;
+  border-radius: 10px;
+}
+
+.skill-category h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.skill-list {
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Contact Section */
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #667eea;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #764ba2;
+}
+
+/* Footer */
+footer {
+  background: #fafafa;
+  padding: 40px 0;
+  text-align: center;
+  color: #666;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .project,
+  .project:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .iphone-mockup {
+    width: 180px;
+    height: 360px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+.slideshow-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 20px auto;
+  position: relative;
+}
+
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 3px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #667eea;
+}
+
+/* MODAL STYLES */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  display: flex;
+  padding: 20px;
+  max-width: 800px;
+  width: 90%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal-slideshow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.description {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}

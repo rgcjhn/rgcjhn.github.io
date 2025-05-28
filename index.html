@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rogec John Pecarana - Portfolio</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="profile-image-wrapper">
+          <img class="profile-image" src="images/me.png" />
+        </div>
+        <h1>Rogec John Pecarana</h1>
+        <p class="subtitle">Full Stack Developer (Mobile, Web)</p>
+      </div>
+    </header>
+
+    <nav>
+      <div class="container">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <p>
+            Hi, I'm a full-stack developer with a love for building clean, intuitive mobile and web experiences. I started out in web development for 2 years, then got into mobile
+            (mostly React Native). Over the past 4 years, I've focused on crafting cross-platform apps using React Native — with 5+ apps live on the App Store and Google Play.<br />
+
+            I enjoy turning ideas into polished products, and I'm always up for a new challenge that pushes me to grow. When I'm not coding, I’m usually exploring new tech,
+            sketching out app ideas, or tweaking UI layouts for fun.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project">
+            <div class="iphone-mockup" onclick="openModal(0)">
+              <div class="iphone-screen">
+                <div class="iphone-notch"></div>
+                <div class="project-screen-content app1">
+                  <div class="slideshow-wrapper">
+                    <div class="slideshow-container">
+                      <div class="slide">
+                        <img src="images/app-singlife-0.jpg" />
+                      </div>
+                      <div class="slide">
+                        <img src="images/app-singlife-1.jpg" />
+                      </div>
+                      <div class="slide">
+                        <img src="images/app-singlife-2.jpg" />
+                      </div>
+                      <div class="dots"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Singlife Plan & Protect</h3>
+              <p class="project-description">
+                The first and only mobile app that guides you to SAVE for emergencies, PLAN your financial goals and PROTECT them with life insurance and savings solutions.​
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">ExpressJS</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Fastlane</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">GCash</span>
+              </div>
+              <div class="project-links">
+                <a href="https://apps.apple.com/ph/app/singlife-plan-protect-ph/id1611353511" class="project-link">Appstore</a>
+                <a href="https://play.google.com/store/apps/details?id=ph.com.singlife.app&hl=en&gl=US&pli=1" class="project-link">Playstore</a>
+              </div>
+            </div>
+
+            <div id="slideshowModal" class="modal">
+              <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <div class="iphone-mockup" onclick="openModal(0)">
+                  <div class="iphone-screen">
+                    <div class="iphone-notch"></div>
+                    <div class="project-screen-content app1">
+                      <div class="modal-slideshow">
+                        <div class="slide">
+                          <img src="images/app-singlife-0.jpg" />
+                        </div>
+                        <div class="slide">
+                          <img src="images/app-singlife-1.jpg" />
+                        </div>
+                        <div class="slide">
+                          <img src="images/app-singlife-2.jpg" />
+                        </div>
+                        <div class="dots"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="description">
+                  <h2>Slideshow Title</h2>
+                  <p>This is the description for the slideshow. You can use this space to write about the content, context, or purpose of the images being displayed.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="iphone-mockup">
+              <div class="iphone-screen">
+                <div class="iphone-notch"></div>
+                <div class="project-screen-content app2">
+                  <div class="slideshow-wrapper">
+                    <div class="slideshow-container">
+                      <div class="slide">
+                        <img src="images/app-gem-0.jpg" />
+                      </div>
+                      <div class="slide">
+                        <img src="images/app-gem-1.jpg" />
+                      </div>
+                      <div class="slide">
+                        <img src="images/app-gem-2.png" />
+                      </div>
+                      <div class="dots"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">GEM</h3>
+              <p class="project-description">
+                GEM is a global platform for 24/7 brand learning, performance tracking, store checks, and sharing best practices across Remy Cointreau teams.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">ExpressJS</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Fastlane</span>
+              </div>
+              <div class="project-links">
+                <a href="https://play.google.com/store/apps/details?id=com.remycointreau.gem" class="project-link">Playstore</a>
+                <a href="https://apps.apple.com/au/app/gem/id1521465814" class="project-link">Appstore</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="iphone-mockup">
+              <div class="iphone-screen">
+                <div class="iphone-notch"></div>
+                <div class="project-screen-content app3">
+                  <div class="slideshow-wrapper">
+                    <div class="slideshow-container">
+                      <div class="slide">
+                        <img src="images/app-visitmalta-0.jpg" />
+                      </div>
+                      <div class="slide">
+                        <img src="images/app-visitmalta-1.jpg" />
+                      </div>
+                      <div class="slide">
+                        <img src="images/app-visitmalta-2.jpg" />
+                      </div>
+                      <div class="dots"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">VisitMalta+</h3>
+              <p class="project-description">VisitMalta+ is the ultimate app you need when planning to visit the Maltese Islands and throughout your stay.</p>
+              <div class="project-tech">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Maps Integration</span>
+                <span class="tech-tag">Geolocation tracking</span>
+              </div>
+              <div class="project-links">
+                <a href="https://play.google.com/store/apps/details?id=com.visitmalta.tourist" class="project-link">Playstore</a>
+                <a href="https://apps.apple.com/us/app/visitmalta/id1471501091" class="project-link">Appstore</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="iphone-mockup">
+              <div class="iphone-screen">
+                <div class="iphone-notch"></div>
+                <div class="project-screen-content app3">
+                  <div class="slideshow-wrapper">
+                    <div class="slideshow-container">
+                      <div class="slide">
+                        <img src="images/app-honeypot-1.jpg" />
+                      </div>
+                      <div class="slide">
+                        <img src="images/app-honeypot-2.jpg" />
+                      </div>
+                      <div class="dots"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Honeypot Humor</h3>
+              <p class="project-description">A fun and simple app where you can scroll endlessly to discover and enjoy hilarious jokes anytime, anywhere.</p>
+              <div class="project-tech">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">ExpressJS</span>
+                <span class="tech-tag">CrocoJS</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+              <div class="project-links">
+                <a href="https://apps.apple.com/us/app/visitmalta/id1471501091" class="project-link">Appstore</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Frontend Development</h3>
+            <div class="skill-list">
+              React Native, Laravel (PHP), NextJS <br />
+              iOS (Swift), Android (Kotlin)<br />
+              Flutter, Ionic <br />
+              Typescript, React, Vue.js<br />
+              HTML5, CSS3, JavaScript<br />
+              TailwindCSS, Sass/SCSS<br />
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Backend Development</h3>
+            <div class="skill-list">
+              Node.js, Python, PHP<br />
+              Express.js, Django<br />
+              RESTful APIs, mySQL <br />
+              Firebase, Amazon Cloud <br />
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Other Technologies</h3>
+            <div class="skill-list">
+              Stripe API, WebSockets <br />
+              ESLint, Prettier, Agile/Scrum <br />
+              Trello, Jira, Figma<br />
+              Fastlane, CI/CD tools <br />
+              Appstore/Playstore (Deployment) <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="contact-content">
+          <p>I'm always interested in new opportunities and collaborations. Whether you have a project in mind or just want to say hello, feel free to reach out.</p>
+          <div class="contact-links">
+            <a href="mailto:rgcjhn@gmail.com" class="contact-link">Email</a>
+            <a href="https://github.com/rgcjhn" class="contact-link" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/rgcjhn" class="contact-link" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Rogec John Pecarana. Built with passion and clean code.</p>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
