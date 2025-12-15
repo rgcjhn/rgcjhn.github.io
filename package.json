@@ -8,11 +8,13 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:write": "prettier --write .",
+    "format:check": "prettier --check .",
+    "generate:image": "node scripts/generate-image-index.js && npm run format:write -- src/assets/index.ts"
   },
   "dependencies": {
     "@fontsource/poppins": "^5.2.7",
+    "@radix-ui/react-collapsible": "^1.1.12",
     "@radix-ui/react-slot": "^1.2.4",
     "@tailwindcss/vite": "^4.1.18",
     "class-variance-authority": "^0.7.1",

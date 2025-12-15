@@ -13,7 +13,7 @@ const FadeInSection = ({ children }: { children: React.ReactNode }) => {
         }
       },
       {
-        threshold: 0.1, // trigger when 20% visible
+        threshold: 0.2, // trigger when 20% visible
       }
     );
 

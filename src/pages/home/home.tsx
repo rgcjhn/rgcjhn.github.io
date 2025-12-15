@@ -6,20 +6,34 @@ import {
   Smartphone,
   Globe,
   ExternalLink,
-  Store,
-  Users,
-  MessageSquare,
-  Briefcase,
-  Home as LucideHome,
-  Wrench,
-  SquarePen,
   Layers,
   Cloud,
+  MoveUpRight,
+  ChevronDown,
 } from 'lucide-react';
-import dp from '@/assets/dp.png';
-import './home.css';
 import SkillCard from './components/skill-card';
 import FadeInSection from '@/components/fade-in-section';
+import {
+  Docker,
+  Dp,
+  Fastlane,
+  Figma,
+  Flutter,
+  Laravel,
+  Nodejs,
+  OnCall,
+  Pgsql,
+  Playstore,
+  React as ReactSvg,
+  Github as GithubSvg,
+  Sibs,
+  Singlife,
+  Ts,
+  YayaAndDriver,
+} from '@/assets';
+
+import './home.css';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 
 // ==================== CONSTANTS ====================
 const EXPERIENCES = [
@@ -52,7 +66,7 @@ const EXPERIENCES = [
 const SKILLS_DATA = [
   {
     category: 'MOBILE & FRONTEND DEVELOPMENT',
-    icon: <Layers className="text-white w-8 h-8" />,
+    icon: <Layers className="text-white w-6 h-6 sm:w-8 sm:h-8" />,
     color: 'bg-gradient-to-br from-orange-500 to-orange-600',
     technologies: [
       'React Native',
@@ -66,7 +80,7 @@ const SKILLS_DATA = [
   },
   {
     category: 'BACKEND & CLOUD TECHNOLOGIES',
-    icon: <Cloud className="text-black w-8 h-8" />,
+    icon: <Cloud className="text-black w-6 h-6 sm:w-8 sm:h-8" />,
     color: 'bg-gradient-to-br from-lime-400 to-lime-500',
     technologies: [
       'Node.js',
@@ -82,85 +96,112 @@ const SKILLS_DATA = [
 
 const PROJECTS = [
   {
-    title: 'Sibs - Social Barter Marketplace',
-    type: 'Marketplace App',
+    title: 'Sibs - Trade, Buy, Sell, Flip',
+    type: 'Social Barter Marketplace App',
     description:
       'Social marketplace with TikTok-style feed and real-time chat system for bartering goods and services.',
     stack: 'React Native/Expo, Firebase, Firestore, Redux Toolkit',
     features: 'Real-time chat, TikTok-style feed, secure authentication',
     live: true,
-    icon: <Store className="w-6 h-6 text-white" />,
-    gradient: 'from-purple-600 to-blue-600',
+    icon: <img src={Sibs} className="w-13 h-13" />,
+    gradient: 'from-black to-gray-800',
   },
   {
-    title: 'Yaya & Driver',
-    type: 'Service Marketplace',
+    title: 'Yaya & Driver - Hanap, Usap, Hire',
+    type: 'Find Trusted Yaya and Driver',
     description:
       'Two-sided platform connecting households with verified household staff and drivers.',
     stack: 'React Native, Laravel, PostgreSQL, Firebase',
     features: 'ID verification, live job feed, hybrid chat system',
     live: true,
-    icon: <Users className="w-6 h-6 text-white" />,
+    icon: <img src={YayaAndDriver} className="w-14 h-14" />,
     gradient: 'from-purple-900 to-purple-600',
   },
   {
-    title: 'On Call - Hospitality Staffing',
-    type: 'Staffing Solution',
+    title: 'On Call PH',
+    type: 'Reliable job-matching platform for the Food & Beverage, restaurant, hotel, and service industries',
     description:
       'Full staffing solution for hospitality industry with role-based access and real-time alerts.',
     stack: 'React Native, Node.js, WebSockets, PostgreSQL',
     features: 'Role-based access, real-time alerts, in-app messaging',
     live: true,
-    icon: <MessageSquare className="w-6 h-6 text-white" />,
-    gradient: 'from-white to-gray-200',
+    icon: <img src={OnCall} className="w-22 h-22" />,
+    gradient: 'from-blue-900 to-gray-950',
+  },
+  {
+    title: 'Singlife Plan & Protect',
+    type: 'All-in-one digital insurance solution for Filipinos',
+    description:
+      "The Singlife Plan & Protect App is the Philippines' all-in-one digital insurance solution, giving Filipinos a better way to financial independence, allowing you to buy, manage, and access your policies entirely through the app at your own pace and time.",
+    stack: 'React Native, Node.js, WebSockets, PostgreSQL',
+    features: 'Role-based access, real-time alerts, in-app messaging',
+    live: true,
+    icon: <img src={Singlife} className="w-21 h-21" />,
+    gradient: 'from-red-500 to-red-600',
   },
 ];
 
 const TOOLS = [
   {
-    name: 'React Native',
-    category: 'Mobile Framework',
-    icon: <div className="w-6 h-6 border-2 border-white"></div>,
-    color: 'bg-black',
+    name: 'React',
+    category: 'Front-end Framework',
+    icon: <img src={ReactSvg} className="w-8 h-8 sm:w-11 sm:h-11" />,
   },
   {
     name: 'Figma',
     category: 'Design Tool',
-    icon: <div className="w-4 h-4 bg-pink-500 rounded"></div>,
-    color: 'bg-gradient-to-br from-purple-500 to-pink-500',
+    icon: <img src={Figma} className="w-8 h-8 sm:w-11 sm:h-11" />,
   },
   {
-    name: 'Framer',
-    category: 'Website Builder',
-    icon: <div className="w-6 h-6 border-2 border-white"></div>,
-    color: 'bg-black',
+    name: 'Flutter',
+    category: 'Mobile App Framework',
+    icon: <img src={Flutter} className="w-8 h-8 sm:w-11 sm:h-11" />,
   },
   {
-    name: 'WordPress',
-    category: 'CMS',
-    icon: <div className="w-6 h-6 bg-gray-200 rounded"></div>,
-    color: 'bg-white',
+    name: 'Laravel',
+    category: 'Web & Backend',
+    icon: <img src={Laravel} className="w-8 h-8 sm:w-11 sm:h-11" />,
   },
   {
-    name: 'ChatGPT',
-    category: 'AI Assistant',
-    icon: <div className="w-6 h-6 border-2 border-black rounded-full"></div>,
-    color: 'bg-white',
+    name: 'PostgreSQL',
+    category: 'Database',
+    icon: <img src={Pgsql} className="w-8 h-8 sm:w-11 sm:h-11" />,
   },
   {
-    name: 'Next.js',
-    category: 'React Framework',
-    icon: <span className="font-bold text-white text-sm">N</span>,
-    color: 'bg-black',
+    name: 'NodeJS',
+    category: 'Web & Backend',
+    icon: <img src={Nodejs} className="w-8 h-8 sm:w-11 sm:h-11" />,
   },
-];
-
-const NAV_ITEMS = [
-  { key: 'hero', icon: LucideHome, label: 'Home' },
-  { key: 'experience', icon: Briefcase, label: 'Experience' },
-  { key: 'projects', icon: Store, label: 'Projects' },
-  { key: 'skills', icon: Wrench, label: 'Skills' },
-  { key: 'thoughts', icon: SquarePen, label: 'Thoughts' },
+  {
+    name: 'Typescript',
+    category: 'Programming Language',
+    icon: <img src={Ts} className="w-8 h-8 sm:w-11 sm:h-11" />,
+  },
+  {
+    name: 'Docker',
+    category: 'Build Deployment',
+    icon: <img src={Docker} className="w-8 h-8 sm:w-11 sm:h-11" />,
+  },
+  {
+    name: 'Github',
+    category: 'Code Repository',
+    icon: <img src={GithubSvg} className="w-8 h-8 sm:w-11 sm:h-11" />,
+  },
+  {
+    name: 'Fastlane',
+    category: 'Build Automation',
+    icon: <img src={Fastlane} className="w-8 h-8 sm:w-11 sm:h-11" />,
+  },
+  {
+    name: 'App Store Connect',
+    category: 'Build Management',
+    icon: <img src={Fastlane} className="w-8 h-8 sm:w-11 sm:h-11" />,
+  },
+  {
+    name: 'Playstore Console',
+    category: 'Build Management',
+    icon: <img src={Playstore} className="w-8 h-8 sm:w-11 sm:h-11" />,
+  },
 ];
 
 const SOCIAL_LINKS = [
@@ -173,45 +214,26 @@ const SOCIAL_LINKS = [
 const CONTACT_METHODS = [
   { icon: Mail, title: 'Email', content: 'rgcjhn@gmail.com', href: 'mailto:rgcjhn@gmail.com' },
   { icon: Smartphone, title: 'Phone', content: '+63 915 556 6531' },
-  { icon: Globe, title: 'Location', content: 'Philippines' },
+  { icon: Globe, title: 'Location', content: 'Davao City, Philippines' },
 ];
 
 // ==================== COMPONENTS ====================
 const TitleRenderer = ({ title, subtitle }: { title: string; subtitle: string }) => (
   <>
-    <h1 className="text-7xl font-bold mb-2 text-white">{title}</h1>
-    <h1 className="text-7xl font-bold mb-6 text-subtle">{subtitle}</h1>
+    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-2 text-white">
+      {title}
+    </h1>
+    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 text-subtle">
+      {subtitle}
+    </h1>
   </>
-);
-
-const NavigationBar = ({
-  activeSection,
-  setActiveSection,
-}: {
-  activeSection: string;
-  setActiveSection: (key: string) => void;
-}) => (
-  <div className="absolute h-40 w-full flex justify-center pt-8">
-    <div className="h-12 gap-2.5 px-2.5 rounded-lg bg-white/3 flex items-center justify-center">
-      {NAV_ITEMS.map(({ key, icon: Icon, label }) => (
-        <button
-          key={key}
-          onClick={() => setActiveSection(key)}
-          className={`flex w-9 h-9 items-center justify-center ${activeSection === key ? 'text-primary-orange' : 'text-gray-400'} hover:text-white transition`}
-          aria-label={label}
-        >
-          <Icon size={21} />
-        </button>
-      ))}
-    </div>
-  </div>
 );
 
 const HeaderSection = () => (
   <FadeInSection>
-    <div className="mb-16">
+    <div className="mb-8 sm:mb-12 lg:mb-16">
       <TitleRenderer title="FULL-STACK" subtitle="DEVELOPER" />
-      <p className="text-muted max-w-2xl leading-relaxed mb-8">
+      <p className="text-muted max-w-2xl leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base">
         Passionate developer with 5+ years experience building high-quality mobile and web
         applications. Expert in cross-platform development with React Native, TypeScript, and modern
         backend technologies.
@@ -223,18 +245,18 @@ const HeaderSection = () => (
 );
 
 const StatsSection = () => (
-  <div className="flex gap-12 mb-8">
-    <StatItem value="5+" label="Years of\nExperience" />
-    <StatItem value="5+" label="Apps\nDeployed" />
-    <StatItem value="10+" label="Projects\nCompleted" />
-    <StatItem value="10k+" label="Users\nServed" />
+  <div className="grid grid-cols-2 sm:flex sm:gap-6 lg:gap-8 mb-6 sm:mb-8 gap-4">
+    <StatItem value="5+" label={`Years of\nExperience`} />
+    <StatItem value="5+" label={`Apps\nDeployed`} />
+    <StatItem value="10+" label={`Projects\nCompleted`} />
+    <StatItem value="10k+" label={`Users\nServed`} />
   </div>
 );
 
 const SkillCardsSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   return (
-    <div className="flex gap-4">
+    <div className="flex flex-col sm:flex-row gap-4">
       {SKILLS_DATA.map((skill, index) => (
         <SkillCard
           key={index}
@@ -251,27 +273,31 @@ const SkillCardsSection = () => {
 
 const StatItem = ({ value, label }: { value: string; label: string }) => (
   <div>
-    <div className="text-5xl text-white font-bold">{value}</div>
+    <div className="text-3xl sm:text-4xl lg:text-5xl text-white font-bold">{value}</div>
     <div className="text-xs text-muted uppercase tracking-wider whitespace-pre-line">{label}</div>
   </div>
 );
 
 const ProjectsSection = () => (
-  <div className="space-y-6">
+  <div className="space-y-4 sm:space-y-6">
     {PROJECTS.map((project, index) => (
-      <div key={index} className="flex items-center gap-6 group cursor-pointer">
+      <div
+        key={index}
+        className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 group cursor-pointer"
+      >
         <div
-          className={`w-20 h-20 bg-linear-to-br ${project.gradient} rounded-xl shrink-0 overflow-hidden flex items-center justify-center`}
+          className={`w-16 h-16 sm:w-20 sm:h-20 bg-linear-to-br ${project.gradient} rounded-xl shrink-0 overflow-hidden flex items-center justify-center`}
         >
           {project.icon}
         </div>
         <div className="flex-1">
-          <h3 className="text-xl font-bold mb-1">{project.title}</h3>
+          <h3 className="text-lg sm:text-xl font-bold mb-1">{project.title}</h3>
           <p className="text-sm text-muted">{project.type}</p>
+          <p className="text-sm text-gray-500 mt-2 block sm:hidden">{project.description}</p>
         </div>
-        <ExternalLink
+        <MoveUpRight
           size={20}
-          className="text-gray-600 group-hover:text-primary-orange transition"
+          className="text-gray-600 group-hover:text-primary-orange transition self-end sm:self-auto"
         />
       </div>
     ))}
@@ -279,11 +305,14 @@ const ProjectsSection = () => (
 );
 
 const ExperienceSection = () => (
-  <div className="space-y-8">
+  <div className="space-y-6 sm:space-y-8">
     {EXPERIENCES.map((exp, index) => (
-      <div key={index} className="border-l-2 border-gray-800 pl-6 relative group cursor-pointer">
-        <div className="absolute -left-2.25 top-0 w-4 h-4 bg-orange-400 rounded-full"></div>
-        <h3 className="text-xl font-bold mb-2">{exp.company}</h3>
+      <div
+        key={index}
+        className="border-l-2 border-gray-800 pl-4 sm:pl-6 relative group cursor-pointer"
+      >
+        <div className="absolute -left-2.5 sm:-left-2.25 top-0 w-3 h-3 sm:w-4 sm:h-4 bg-orange-400 rounded-full"></div>
+        <h3 className="text-lg sm:text-xl font-bold mb-2">{exp.company}</h3>
         <p className="text-sm text-muted mb-3 leading-relaxed">{exp.description}</p>
         <p className="text-xs text-muted">{exp.period}</p>
         <ExternalLink
@@ -295,59 +324,84 @@ const ExperienceSection = () => (
   </div>
 );
 
-const ToolsSection = () => (
-  <div className="grid grid-cols-2 gap-4">
-    {TOOLS.map((tool, index) => (
-      <div
-        key={index}
-        className="flex items-center gap-4 bg-gray-900 rounded-xl p-4 hover:bg-gray-800 transition cursor-pointer"
-      >
+const ToolsAndExpertiseSection = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const VISIBLE_COUNT = 6;
+  const visibleTools = TOOLS.slice(0, VISIBLE_COUNT);
+  const hiddenTools = TOOLS.slice(VISIBLE_COUNT);
+
+  const renderGrid = (tools: typeof TOOLS) => (
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+      {tools.map((tool, index) => (
         <div
-          className={`w-12 h-12 ${tool.color} rounded-xl flex items-center justify-center shrink-0`}
+          key={index}
+          className="flex items-center gap-3 sm:gap-4 rounded-lg sm:rounded-xl p-3 sm:p-4 hover:bg-muted/20 transition cursor-pointer"
         >
-          {tool.icon}
+          <div className="w-10 h-10 sm:w-15 sm:h-15 bg-white rounded-lg sm:rounded-xl flex items-center justify-center shrink-0">
+            {tool.icon}
+          </div>
+          <div>
+            <h3 className="font-medium text-sm sm:text-[24px]">{tool.name}</h3>
+            <p className="text-[16px] text-muted">{tool.category}</p>
+          </div>
         </div>
-        <div>
-          <h3 className="font-bold">{tool.name}</h3>
-          <p className="text-xs text-muted">{tool.category}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-);
+      ))}
+    </div>
+  );
+
+  return (
+    <Collapsible open={open} onOpenChange={setOpen} className="space-y-4">
+      {/* Always visible */}
+      {renderGrid(visibleTools)}
+
+      {/* Collapsible part */}
+      <CollapsibleContent>{renderGrid(hiddenTools)}</CollapsibleContent>
+
+      {TOOLS.length > VISIBLE_COUNT && (
+        <CollapsibleTrigger asChild>
+          <button className="flex items-center gap-2 text-sm text-muted hover:text-white transition">
+            {open ? 'Show less' : 'Show more'}
+            <ChevronDown className={`h-4 w-4 transition-transform ${open ? 'rotate-180' : ''}`} />
+          </button>
+        </CollapsibleTrigger>
+      )}
+    </Collapsible>
+  );
+};
 
 const ContactSection = () => (
   <>
-    <div className="grid grid-cols-3 gap-6 mb-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
       {CONTACT_METHODS.map((method, index) => (
-        <div key={index} className="bg-gray-900 rounded-xl p-6">
-          <method.icon className="w-8 h-8 mx-auto text-primary-orange mb-3" />
-          <h4 className="font-bold text-center mb-1">{method.title}</h4>
+        <div key={index} className="bg-muted/20 rounded-xl p-4 sm:p-6">
+          <method.icon className="w-6 h-6 sm:w-8 sm:h-8 mx-auto text-primary-orange mb-2 sm:mb-3" />
+          <h4 className="font-bold text-center mb-1 text-sm sm:text-base">{method.title}</h4>
           {method.href ? (
             <a
               href={method.href}
-              className="text-sm text-muted hover:text-primary-orange transition text-center block"
+              className="text-xs sm:text-sm text-muted hover:text-primary-orange transition text-center block"
             >
               {method.content}
             </a>
           ) : (
-            <p className="text-sm text-muted text-center">{method.content}</p>
+            <p className="text-xs sm:text-sm text-muted text-center">{method.content}</p>
           )}
         </div>
       ))}
     </div>
 
-    <div className="flex justify-center gap-4">
+    <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
       <button
         onClick={() => window.open('mailto:rgcjhn@gmail.com', '_blank')}
-        className="px-6 py-3 bg-primary-orange rounded-xl hover:bg-orange-600 transition"
+        className="px-4 sm:px-6 py-2.5 sm:py-3 bg-primary-orange rounded-xl hover:bg-orange-600 transition text-sm sm:text-base flex items-center justify-center"
       >
         <Mail className="w-4 h-4 inline mr-2" />
         Contact Me
       </button>
       <button
         onClick={() => window.open('https://linkedin.com/in/rgcjhn', '_blank')}
-        className="px-6 py-3 bg-gray-800 rounded-xl hover:bg-gray-700 transition"
+        className="px-4 sm:px-6 py-2.5 sm:py-3 bg-gray-800 rounded-xl hover:bg-gray-700 transition text-sm sm:text-base flex items-center justify-center"
       >
         <Linkedin className="w-4 h-4 inline mr-2" />
         LinkedIn
@@ -357,8 +411,8 @@ const ContactSection = () => (
 );
 
 const Footer = () => (
-  <footer className="border-t border-gray-800 pt-8 text-center">
-    <p className="text-sm text-gray-500">
+  <footer className="border-t border-gray-800 pt-6 sm:pt-8 text-center">
+    <p className="text-xs sm:text-sm text-gray-500">
       © {new Date().getFullYear()} Rogec John Pecarana. All rights reserved.
     </p>
     <p className="text-xs text-gray-600 mt-2">Full-Stack Developer | React Native Specialist</p>
@@ -367,7 +421,6 @@ const Footer = () => (
 
 // ==================== MAIN COMPONENT ====================
 const Home = () => {
-  const [activeSection, setActiveSection] = useState('hero');
   const [scrolledAfterHeader, setScrolledAfterHeader] = useState(false);
 
   useEffect(() => {
@@ -380,9 +433,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-[#151312] text-white flex overflow-y-auto">
-      <NavigationBar activeSection={activeSection} setActiveSection={setActiveSection} />
-
-      <div className="mx-auto max-w-275 px-4 py-40">
+      <div className="mx-auto w-full max-w-6xl px-3 sm:px-4">
         <FadeInSection>
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Fixed Left Card */}
@@ -406,45 +457,47 @@ const LeftProfileCard = ({ scrolledAfterHeader }: { scrolledAfterHeader: boolean
     lg:${scrolledAfterHeader ? 'fixed top-7.5' : 'sticky top-40'}
   `}
     >
-      <div className="w-full bg-linear-to-br from-gray-100 to-white rounded-3xl p-8 shadow-2xl relative overflow-hidden">
+      <div className="w-full bg-linear-to-br from-gray-100 to-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl relative overflow-hidden">
         {/* Decorative elements */}
-        <div className="absolute top-6 right-6 w-3 h-3 bg-orange-500 rounded-full"></div>
-        <div className="absolute top-8 right-12 w-2 h-2 bg-orange-300 rounded-full"></div>
-        <div className="border-2 border-dashed border-orange-400 absolute top-6 right-6 w-32 h-32 rounded-full opacity-30"></div>
-        <div className="border-3 border-dashed border-primary-orange absolute -top-24 -left-2 w-44 h-44 rounded-full z-1"></div>
+        <div className="absolute top-4 sm:top-6 right-4 sm:right-6 w-2 h-2 sm:w-3 sm:h-3 bg-orange-500 rounded-full"></div>
+        <div className="absolute top-5 sm:top-8 right-8 sm:right-12 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-300 rounded-full"></div>
+        <div className="border-2 border-dashed border-orange-400 absolute top-4 sm:top-6 right-4 sm:right-6 w-20 h-20 sm:w-32 sm:h-32 rounded-full opacity-30"></div>
+        <div className="border-3 border-dashed border-primary-orange absolute -top-16 sm:-top-24 -left-2 w-28 h-28 sm:w-44 sm:h-44 rounded-full z-1"></div>
 
         {/* Profile Image */}
         <div className="relative mb-4">
-          <div className="w-60 h-62 mx-auto rounded-2xl overflow-hidden bg-linear-to-br from-orange-600 to-orange-800 shadow-xl">
-            <img src={dp} alt="Rogec Pecarana" className="w-full h-full object-cover" />
+          <div className="w-40 h-44 sm:w-52 sm:h-54 lg:w-60 lg:h-62 mx-auto rounded-2xl overflow-hidden bg-linear-to-br from-orange-600 to-orange-800 shadow-xl">
+            <img src={Dp} alt="Rogec Pecarana" className="w-full h-full object-cover" />
           </div>
         </div>
 
         {/* Name */}
-        <h2 className="text-3xl font-bold text-black text-center mb-2">ROGEC JOHN PECARANA</h2>
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-black text-center mb-2">
+          ROGEC JOHN PECARANA
+        </h2>
 
         {/* Decoration */}
-        <div className="flex justify-center mb-4 h-16 relative">
-          <div className="absolute -top-12 -left-42 card-decoration" />
+        <div className="flex justify-center mb-4 h-12 sm:h-16 relative">
+          <div className="absolute -top-8 sm:-top-12 -left-20 sm:-left-42 card-decoration" />
         </div>
 
         {/* Description */}
-        <p className="text-gray-600 text-center text-sm leading-relaxed mb-8">
+        <p className="text-gray-600 text-center text-xs sm:text-sm leading-relaxed mb-6 sm:mb-8">
           Full-Stack Developer & React Native Specialist with 5+ years experience building
           high-quality mobile and web applications.
         </p>
 
         {/* Social Links */}
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-3 sm:gap-4">
           {SOCIAL_LINKS.map(({ href, icon: Icon }, index) => (
             <a
               key={index}
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full hover:bg-orange-100 flex items-center justify-center transition-colors"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full hover:bg-orange-100 flex items-center justify-center transition-colors"
             >
-              <Icon className="w-5 h-5 text-primary-orange" />
+              <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary-orange" />
             </a>
           ))}
         </div>
@@ -456,7 +509,7 @@ const LeftProfileCard = ({ scrolledAfterHeader }: { scrolledAfterHeader: boolean
 // ==================== RIGHT CONTENT ====================
 const RightContent = () => (
   <div className="flex-1">
-    <div className="max-w-4xl p-8 py-0">
+    <div className="max-w-3xl p-4 sm:p-6 lg:p-8 py-0">
       {/* Header Section */}
       <HeaderSection />
 
@@ -471,8 +524,8 @@ const RightContent = () => (
       </SectionWrapper>
 
       {/* Technical Skills Section */}
-      <SectionWrapper title="TECHNICAL" subtitle="TOOLS">
-        <ToolsSection />
+      <SectionWrapper title="TOOLS &" subtitle="EXPERTISE">
+        <ToolsAndExpertiseSection />
       </SectionWrapper>
 
       {/* Contact Section */}
@@ -496,7 +549,7 @@ const SectionWrapper = ({
   children: React.ReactNode;
 }) => (
   <FadeInSection>
-    <div className="mb-16">
+    <div className="mb-10 sm:mb-12 lg:mb-16">
       <TitleRenderer title={title} subtitle={subtitle} />
       {children}
     </div>
