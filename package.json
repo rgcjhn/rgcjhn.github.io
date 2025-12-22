@@ -7,9 +7,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist",
+    "lint": "eslint .",
     "format:write": "prettier --write .",
     "format:check": "prettier --check .",
     "generate:image": "node scripts/generate-image-index.js && npm run format:write -- src/assets/index.ts"
