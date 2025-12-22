@@ -157,7 +157,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-[#151312] text-white flex overflow-y-auto">
       <div className="mx-auto w-full max-w-6xl px-3 sm:px-4 py-6 sm:py-12">
-        <FadeInSection>
+        <FadeInSection fadeThreshold={0}>
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Fixed Left Card */}
             <ProfileCard />

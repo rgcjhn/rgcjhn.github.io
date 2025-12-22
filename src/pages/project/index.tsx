@@ -161,7 +161,7 @@ const ScreenshotsSection = ({ screenshots, title }: { screenshots: string[]; tit
       {screenshots.map((screenshot, index) => (
         <div
           key={index}
-          className="aspect-[9/16] bg-muted/20 rounded-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer"
+          className="aspect-9/16 bg-muted/20 rounded-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer"
         >
           <img
             src={screenshot}
@@ -191,7 +191,7 @@ const ProjectPage = () => {
   return (
     <div className="min-h-screen bg-[#151312] text-white flex overflow-y-auto">
       <div className="mx-auto w-full max-w-6xl px-3 sm:px-4 py-6 sm:py-12">
-        <FadeInSection fadeThreshold={0.1}>
+        <FadeInSection fadeThreshold={0}>
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Fixed Left Card */}
             <ProfileCard />
