@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 
-const FadeInSection = ({ children }: { children: React.ReactNode }) => {
+const FadeInSection: React.FC<{ children: React.ReactNode; fadeThreshold?: number }> = ({
+  children,
+  fadeThreshold = 0.2, // trigger when 20% visible
+}) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -13,7 +16,7 @@ const FadeInSection = ({ children }: { children: React.ReactNode }) => {
         }
       },
       {
-        threshold: 0.2, // trigger when 20% visible
+        threshold: fadeThreshold,
       }
     );
 
