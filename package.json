@@ -1,13 +1,15 @@
 {
   "name": "rgcjhn.github.io",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "homepage": "https://rgcjhn.github.io",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "deploy": "gh-pages -d build",
     "format:write": "prettier --write .",
     "format:check": "prettier --check .",
     "generate:image": "node scripts/generate-image-index.js && npm run format:write -- src/assets/index.ts"
@@ -37,6 +39,7 @@
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
+    "gh-pages": "^6.3.0",
     "globals": "^16.5.0",
     "prettier": "^3.7.4",
     "prettier-plugin-organize-imports": "^4.3.0",
