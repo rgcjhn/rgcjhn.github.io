@@ -31,6 +31,26 @@ import {
 } from 'lucide-react';
 import { daysBetweenDates } from './utils/string';
 
+import oncall1 from './assets/screenshots/oncall-1.jpg';
+import oncall2 from './assets/screenshots/oncall-2.jpg';
+import sibs1 from './assets/screenshots/sibs1.webp';
+import sibs2 from './assets/screenshots/sibs2.webp';
+import sibs3 from './assets/screenshots/sibs3.webp';
+import sibs4 from './assets/screenshots/sibs4.webp';
+import sibs5 from './assets/screenshots/sibs5.webp';
+import singlife1 from './assets/screenshots/singlife1.webp';
+import singlife2 from './assets/screenshots/singlife2.webp';
+import singlife3 from './assets/screenshots/singlife3.webp';
+import singlife4 from './assets/screenshots/singlife4.webp';
+import singlife5 from './assets/screenshots/singlife5.webp';
+import singlife6 from './assets/screenshots/singlife6.webp';
+import yayadriver1 from './assets/screenshots/yayadriver1.webp';
+import yayadriver2 from './assets/screenshots/yayadriver2.webp';
+import yayadriver3 from './assets/screenshots/yayadriver3.webp';
+import yayadriver4 from './assets/screenshots/yayadriver4.webp';
+import yayadriver5 from './assets/screenshots/yayadriver5.webp';
+import yayadriver6 from './assets/screenshots/yayadriver6.webp';
+
 export const EXPERIENCES = [
   {
     company: 'Freelance',
@@ -113,14 +133,7 @@ export const PROJECTS = [
       'Fastlane',
       'APIs',
     ],
-    screenshots: [
-      '/screenshots/singlife-1.jpg',
-      '/screenshots/singlife-2.jpg',
-      '/screenshots/singlife-3.jpg',
-      '/screenshots/singlife-4.jpg',
-      '/screenshots/singlife-5.jpg',
-      '/screenshots/singlife-6.jpg',
-    ],
+    screenshots: [singlife1, singlife2, singlife3, singlife4, singlife5, singlife6],
     playstoreUrl: 'https://play.google.com/store/apps/details?id=com.singlife.ph',
     appstoreUrl: 'https://apps.apple.com/ph/app/singlife-plan-protect/id1580101016',
     websiteUrl: 'https://singlife.com.ph',
@@ -185,12 +198,7 @@ export const PROJECTS = [
       'App Store Connect',
       'Play Store',
     ],
-    screenshots: [
-      '/screenshots/yaya-1.jpg',
-      '/screenshots/yaya-2.jpg',
-      '/screenshots/yaya-3.jpg',
-      '/screenshots/yaya-4.jpg',
-    ],
+    screenshots: [yayadriver1, yayadriver2, yayadriver3, yayadriver4, yayadriver5, yayadriver6],
     playstoreUrl: 'https://play.google.com/store/apps/details?id=com.yayadriver.app',
     appstoreUrl: 'https://apps.apple.com/ph/app/yaya-driver/id1555555555',
     websiteUrl: 'https://yaya-driver.com',
@@ -246,13 +254,7 @@ export const PROJECTS = [
       'App Store Connect',
       'Play Store',
     ],
-    screenshots: [
-      '/screenshots/oncall-1.jpg',
-      '/screenshots/oncall-2.jpg',
-      '/screenshots/oncall-3.jpg',
-      '/screenshots/oncall-4.jpg',
-      '/screenshots/oncall-5.jpg',
-    ],
+    screenshots: [oncall1, oncall2],
     playstoreUrl: 'https://play.google.com/store/apps/details?id=com.oncall.ph',
     appstoreUrl: 'https://apps.apple.com/ph/app/on-call-ph/id1666666666',
     websiteUrl: 'https://oncall.ph',
@@ -277,7 +279,6 @@ export const PROJECTS = [
     timeline: '1 month',
     teamSize: 'Solo',
     client: 'Vish Uttam',
-    status: 'Live and currently in marketing stage',
     metrics: [{ label: 'Days Deployed', value: daysBetweenDates(new Date('2025-12-30T12:00:00')) }],
   },
   {
@@ -302,14 +303,7 @@ export const PROJECTS = [
       'App Store Connect',
       'Play Store',
     ],
-    screenshots: [
-      '/screenshots/sibs-1.jpg',
-      '/screenshots/sibs-2.jpg',
-      '/screenshots/sibs-3.jpg',
-      '/screenshots/sibs-4.jpg',
-      '/screenshots/sibs-5.jpg',
-      '/screenshots/sibs-6.jpg',
-    ],
+    screenshots: [sibs1, sibs2, sibs3, sibs4, sibs5],
     playstoreUrl: 'https://play.google.com/store/apps/details?id=com.sibs.trade',
     appstoreUrl: 'https://apps.apple.com/ph/app/sibs-trade-buy-sell/id1777777777',
     websiteUrl: 'https://sibs.trade',
@@ -324,16 +318,9 @@ export const PROJECTS = [
       'Contributed to unit testing and end-to-end (E2E) testing to improve overall app reliability',
       'Supported CI/CD pipelines using Fastlane and GitHub Workflows for smoother app store deployments',
     ],
-    challenges: [
-      'Working with an already live and growing application where changes needed to be safe, backward-compatible, and minimally disruptive to users',
-      'Optimizing performance in feed-heavy, TikTok-style interfaces with frequent state updates and real-time interactions',
-      'Debugging platform-specific issues across iOS and Android, especially related to deep linking and app lifecycle behavior',
-      'Balancing rapid bug fixes with proper testing and release validation to avoid regressions in production',
-    ],
     achievements: [
       'Improved overall app responsiveness and reduced unnecessary re-renders on key screens, leading to smoother feed and chat interactions',
       'Helped stabilize post-release builds by resolving critical bugs and improving test coverage',
-      'Successfully supported multiple production releases on both App Store and Play Store using automated pipelines',
       'Contributed to maintaining a stable, scalable codebase while the user base and content volume continued to grow',
     ],
     timeline: '6 months',

@@ -77,7 +77,7 @@ const OverviewSection = ({ project }: { project: (typeof PROJECTS)[0] }) => (
       <InfoCard label="Role" value={project.role} />
       <InfoCard label="Timeline" value={project.timeline} />
       <InfoCard label="Team Size" value={project.teamSize} />
-      <InfoCard label="Status" value={project.status} />
+      {project.status && <InfoCard label="Status" value={project.status} />}
     </div>
   </div>
 );
@@ -156,26 +156,33 @@ const AchievementsSection = ({ achievements }: { achievements: string[] }) => (
 
 const ScreenshotsSection = ({ screenshots, title }: { screenshots: string[]; title: string }) => (
   <div className="mb-10 sm:mb-12 lg:mb-16">
-    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white">Screenshots</h2>
-    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-      {screenshots.map((screenshot, index) => (
-        <div
-          key={index}
-          className="aspect-9/16 bg-muted/20 rounded-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer"
-        >
-          <img
-            src={screenshot}
-            alt={`${title} screenshot ${index + 1}`}
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.style.display = 'none';
-              target.parentElement!.classList.add('flex', 'items-center', 'justify-center');
-              target.parentElement!.innerHTML = `<span class="text-muted text-xs">Screenshot ${index + 1}</span>`;
-            }}
-          />
-        </div>
-      ))}
+    <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-white">Screenshots</h2>
+
+    {/* Horizontal scroll container often used for App Store previews */}
+    <div className="flex overflow-x-auto gap-4 pb-6 scrollbar-hide snap-x snap-mandatory">
+      {screenshots.map((screenshot, index) => {
+        return (
+          <div
+            key={index}
+            /* Aspect ratio adjusted to ~9:19.5 (iPhone standard). 
+               W-64 or W-72 gives it that 'phone' width in a row.
+            */
+            className="relative flex-none w-64 sm:w-72 aspect-[9/19.5] bg-muted/20 rounded-[2rem] overflow-hidden border-[6px] border-zinc-800 shadow-xl snap-center hover:scale-[1.02] transition-transform duration-300"
+          >
+            <img
+              src={screenshot}
+              alt={`${title} screenshot ${index + 1}`}
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+                target.parentElement!.classList.add('flex', 'items-center', 'justify-center');
+                target.parentElement!.innerHTML = `<span class="text-muted-foreground text-xs uppercase font-semibold">Screenshot ${index + 1}</span>`;
+              }}
+            />
+          </div>
+        );
+      })}
     </div>
   </div>
 );
@@ -225,9 +232,11 @@ const ProjectPage = () => {
                 </FadeInSection>
 
                 {/* Challenges */}
-                <FadeInSection>
-                  <ChallengesSection challenges={project.challenges} />
-                </FadeInSection>
+                {project.challenges && (
+                  <FadeInSection>
+                    <ChallengesSection challenges={project.challenges} />
+                  </FadeInSection>
+                )}
 
                 {/* Achievements */}
                 <FadeInSection>
