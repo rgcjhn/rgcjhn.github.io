@@ -427,6 +427,6 @@ export const SOCIAL_LINKS = [
 
 export const CONTACT_METHODS = [
   { icon: Mail, title: 'Email', content: 'rgcjhn@gmail.com', href: 'mailto:rgcjhn@gmail.com' },
-  { icon: Smartphone, title: 'Phone', content: '+63 915 556 6531' },
+  { icon: Smartphone, title: 'Phone', content: '+63 936 855 1467' },
   { icon: Globe, title: 'Location', content: 'Davao City, Philippines' },
 ];
