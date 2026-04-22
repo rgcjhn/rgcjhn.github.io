@@ -60,17 +60,17 @@ import yayadriver6 from './assets/screenshots/yayadriver6.webp';
 export const EXPERIENCES = [
   {
     company: 'Freelance',
-    role: 'Full-Stack Developer (Freelance)',
+    role: 'Full-Stack Mobile Developer',
     description:
-      'Built and launched 3 marketplace apps with real-time chat, secure authentication, and end-to-end workflows. Managed App Store and Play Store deployment, serving thousands of users.',
-    period: 'May 2024 - Present',
+      'Built and deployed multiple marketplace applications with real-time chat, authentication, role-based access, and end-to-end workflows. Handled full development lifecycle including deployment to App Store and Google Play.',
+    period: 'May 2024 - Dec 2025',
     color: 'from-orange-500 to-red-500',
   },
   {
     company: 'Singlife Philippines',
-    role: 'React Native Developer',
+    role: 'Senior React Native Developer',
     description:
-      'Collaborated with a team of 10+ developers to revamp the Singlife Insurance App. Led development of core features including wallet, policy view, and products page.',
+      'Worked with a team of 10+ engineers on a fintech insurance platform. Developed core features including digital wallet, virtual cards, policy management, and emergency funds. Integrated secure banking APIs, identity verification flows, and improved system performance and stability.',
     period: 'Mar 2022 - Jan 2024',
     color: 'from-blue-500 to-cyan-500',
   },
@@ -78,9 +78,17 @@ export const EXPERIENCES = [
     company: 'Webee',
     role: 'React Native & Android Developer',
     description:
-      'Developed and maintained Native Android and React Native applications. Engineered scalable back-end services and APIs using Node.js and Express.',
+      'Developed and maintained cross-platform mobile applications including VisitMalta with location-based search and interactive maps. Fixed critical production issues across multiple Android apps and improved performance and user experience.',
     period: 'May 2018 - Aug 2021',
     color: 'from-purple-500 to-pink-500',
+  },
+  {
+    company: 'POSBANG Corp',
+    role: 'Android Developer (Java)',
+    description:
+      'Built an internal Jira-like workflow management system using Android (Java) and Laravel backend. Implemented task tracking, role-based workflows, and adopted MVP/MVVM architecture for maintainability.',
+    period: 'Apr 2016 - Feb 2018',
+    color: 'from-green-500 to-emerald-500',
   },
 ];
 
