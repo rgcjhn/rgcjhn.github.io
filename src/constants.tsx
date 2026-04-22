@@ -325,9 +325,9 @@ export const PROJECTS = [
       'Play Store',
     ],
     screenshots: [sibs1, sibs2, sibs3, sibs4, sibs5],
-    playstoreUrl: 'https://play.google.com/store/apps/details?id=com.sibs.trade',
-    appstoreUrl: 'https://apps.apple.com/ph/app/sibs-trade-buy-sell/id1777777777',
-    websiteUrl: 'https://sibs.trade',
+    playstoreUrl: 'https://play.google.com/store/apps/details?id=com.sibsapp.prod&pli=1',
+    appstoreUrl: 'https://apps.apple.com/us/app/sibs-trade-buy-sell-flip/id6451119813',
+    websiteUrl: 'https://sibs-app.com/',
     details:
       'Sibs is a live social barter marketplace with an active user base. I joined the project post-launch to support ongoing development, focusing on performance optimization, stability improvements, feature refinements, testing, and release automation across both iOS and Android platforms.',
     responsibilities: [
