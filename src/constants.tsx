@@ -18,6 +18,7 @@ import {
   Singlife,
   Supabase,
   Ts,
+  Visitmalta,
   YayaAndDriver,
 } from '@/assets';
 import {
@@ -44,6 +45,11 @@ import singlife3 from './assets/screenshots/singlife3.webp';
 import singlife4 from './assets/screenshots/singlife4.webp';
 import singlife5 from './assets/screenshots/singlife5.webp';
 import singlife6 from './assets/screenshots/singlife6.webp';
+import visitmalta1 from './assets/screenshots/visitmalta1.jpg';
+import visitmalta2 from './assets/screenshots/visitmalta2.jpg';
+import visitmalta3 from './assets/screenshots/visitmalta3.jpg';
+import visitmalta4 from './assets/screenshots/visitmalta4.jpg';
+import visitmalta5 from './assets/screenshots/visitmalta5.jpg';
 import yayadriver1 from './assets/screenshots/yayadriver1.webp';
 import yayadriver2 from './assets/screenshots/yayadriver2.webp';
 import yayadriver3 from './assets/screenshots/yayadriver3.webp';
@@ -85,26 +91,42 @@ export const SKILLS = [
     color: 'bg-gradient-to-br from-orange-500 to-orange-600',
     technologies: [
       'React Native',
+      'React (Web)',
       'TypeScript',
       'Redux',
-      'React.js',
+      'Zustand',
       'Expo',
-      'Android (Java)',
-      'iOS',
+      'Mobile & Web Architecture',
+      'Jest',
+      'React Testing Library',
+      'Detox',
+      'Android (Kotlin, Java)',
+      'iOS (Swift)',
     ],
   },
   {
-    category: 'BACKEND & CLOUD TECHNOLOGIES',
+    category: 'BACKEND, CLOUD & DEVOPS',
     icon: <Cloud className="text-black w-6 h-6 sm:w-8 sm:h-8" />,
     color: 'bg-gradient-to-br from-lime-400 to-lime-500',
     technologies: [
       'Node.js',
+      'PHP',
       'Laravel',
-      'PostgreSQL',
-      'Firebase',
+      'REST APIs',
+      'GraphQL',
       'WebSockets',
+      'PostgreSQL',
+      'MySQL',
+      'MongoDB',
+      'Firebase',
+      'Supabase',
       'AWS',
+      'Vercel',
       'DigitalOcean',
+      'GitHub Actions',
+      'Fastlane',
+      'Expo EAS',
+      'CI/CD',
     ],
   },
 ];
@@ -150,15 +172,12 @@ export const PROJECTS = [
       'Added universal links and deferred deep links for promotions',
     ],
     challenges: [
-      'Worked on unreadable and unreliable base code',
-      'Upgraded outdated React Native version and packages',
-      'Added automation using Fastlane',
-      'Improved app security',
-    ],
-    achievements: [
-      'Gained hands-on experience with Transfers, Payments, Fastlane, Appsflyer, and deferred deep links',
-      'Processed over ₱100M in insurance premiums',
-      'Reduced app crash rate to <0.1%',
+      'Working with a large legacy codebase with inconsistent patterns and limited documentation',
+      'Ensuring app stability while refactoring and migrating critical modules to TypeScript',
+      'Handling complex financial flows such as cash-in integrations with banks and ensuring transaction reliability',
+      'Implementing deferred deep links for SMS/email campaigns with accurate attribution, install tracking, and seamless post-install navigation',
+      'Ensuring secure deep linking without exposing sensitive user data or allowing malicious link injection',
+      'Optimizing performance in data-heavy screens (wallet, graphs) while maintaining smooth user experience',
     ],
     timeline: '2 years',
     teamSize: '10+ members',
@@ -216,10 +235,7 @@ export const PROJECTS = [
       'Implementing accurate location tracking for job matching',
       'Managing both frontend, backend, website, and admin panel as a solo developer',
     ],
-    achievements: [
-      'Successfully deployed app and currently in marketing phase',
-      'Developed a fully functional admin panel',
-    ],
+    achievements: ['Successfully deployed app', 'Developed a fully functional admin panel'],
     timeline: '4 months',
     teamSize: 'Solo',
     client: 'Vish Uttam',
@@ -272,10 +288,7 @@ export const PROJECTS = [
       'Implementing accurate location tracking for job matching',
       'Managing both frontend, backend, website, and admin panel as a solo developer',
     ],
-    achievements: [
-      'Successfully deployed app and currently in marketing phase',
-      'Developed a fully functional admin panel',
-    ],
+    achievements: ['Developed a fully functional admin panel'],
     timeline: '1 month',
     teamSize: 'Solo',
     client: 'Vish Uttam',
@@ -332,6 +345,44 @@ export const PROJECTS = [
       { label: 'Active Users', value: '100+' },
       { label: 'Items Listed', value: '100+' },
     ],
+  },
+  {
+    id: 'visit-malta',
+    title: 'VisitMalta+',
+    type: 'Official tourism app for Malta, Gozo & Comino',
+    description:
+      'VisitMalta+ is the official app for Malta, Gozo & Comino, helping travelers plan their trips and explore the islands with curated information on attractions, restaurants, transport, and events.',
+    features: 'Travel planning, points of interest, transport info, event discovery',
+    live: true,
+    icon: <img src={Visitmalta} className="w-20 h-20" alt="VisitMalta+" />,
+    gradient: 'from-yellow-500 to-orange-600',
+    role: 'Mobile App Developer',
+    techStack: ['React Native', 'Redux', 'Java (Microservices)', 'Firebase', 'REST APIs'],
+    screenshots: [visitmalta1, visitmalta2, visitmalta3, visitmalta4, visitmalta5],
+    playstoreUrl: 'https://play.google.com/store/apps/details?id=com.visitmalta.tourist',
+    appstoreUrl: 'https://apps.apple.com/mt/app/visitmalta/id1471501091',
+    websiteUrl: 'https://www.visitmalta.com/en/',
+    details:
+      'Built the official VisitMalta+ mobile application from scratch, enabling tourists to explore attractions, plan itineraries, and access essential travel information for Malta, Gozo, and Comino.',
+    responsibilities: [
+      'Built the mobile application from scratch using React Native',
+      'Integrated REST APIs for dynamic travel content and data',
+      'Implemented state management using Redux',
+      'Integrated Firebase for push notifications',
+    ],
+    challenges: [
+      'Handled React Native build issues during early-stage framework maturity',
+      'Ensured stable performance across different mobile devices',
+    ],
+    achievements: [
+      'Successfully launched the official tourism app for Malta',
+      'Reached 50k+ downloads on the Play Store',
+    ],
+    timeline: '—',
+    teamSize: '—',
+    client: 'VisitMalta',
+    status: 'Live',
+    metrics: [{ label: 'Downloads', value: '50k+' }],
   },
 ];
 

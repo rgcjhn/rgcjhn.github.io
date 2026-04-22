@@ -239,9 +239,11 @@ const ProjectPage = () => {
                 )}
 
                 {/* Achievements */}
-                <FadeInSection>
-                  <AchievementsSection achievements={project.achievements} />
-                </FadeInSection>
+                {project.achievements && (
+                  <FadeInSection>
+                    <AchievementsSection achievements={project.achievements} />
+                  </FadeInSection>
+                )}
 
                 {/* Screenshots */}
                 <FadeInSection>
