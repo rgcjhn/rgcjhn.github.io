@@ -23,14 +23,6 @@ const HeaderSection = () => (
   </div>
 );
 
-// const StatsSection = () => (
-//   <div className="grid grid-cols-2 sm:flex sm:gap-6 lg:gap-8 mb-6 sm:mb-8 gap-4">
-//     <StatItem value="5+" label={`Years of\nExperience`} />
-//     <StatItem value="5+" label={`Projects\nCompleted`} />
-//     <StatItem value="10k+" label={`Users\nServed`} />
-//   </div>
-// );
-
 const SkillCardsSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   return (
@@ -48,15 +40,6 @@ const SkillCardsSection = () => {
     </div>
   );
 };
-
-const StatItem = ({ value, label }: { value: string; label: string }) => (
-  <div>
-    <div className="text-3xl sm:text-4xl lg:text-[70px] text-white font-semibold">{value}</div>
-    <div className="text-[16px] text-muted uppercase tracking-wider whitespace-pre-line">
-      {label}
-    </div>
-  </div>
-);
 
 const ProjectsSection = () => (
   <div className="space-y-4 sm:space-y-6">
