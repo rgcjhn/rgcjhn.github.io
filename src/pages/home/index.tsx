@@ -19,18 +19,17 @@ const HeaderSection = () => (
       applications. Expert in cross-platform development with React Native, TypeScript, and modern
       backend technologies.
     </p>
-    <StatsSection />
     <SkillCardsSection />
   </div>
 );
 
-const StatsSection = () => (
-  <div className="grid grid-cols-2 sm:flex sm:gap-6 lg:gap-8 mb-6 sm:mb-8 gap-4">
-    <StatItem value="5+" label={`Years of\nExperience`} />
-    <StatItem value="5+" label={`Projects\nCompleted`} />
-    <StatItem value="10k+" label={`Users\nServed`} />
-  </div>
-);
+// const StatsSection = () => (
+//   <div className="grid grid-cols-2 sm:flex sm:gap-6 lg:gap-8 mb-6 sm:mb-8 gap-4">
+//     <StatItem value="5+" label={`Years of\nExperience`} />
+//     <StatItem value="5+" label={`Projects\nCompleted`} />
+//     <StatItem value="10k+" label={`Users\nServed`} />
+//   </div>
+// );
 
 const SkillCardsSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
